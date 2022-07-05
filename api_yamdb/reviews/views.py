@@ -1,15 +1,13 @@
+from api.permissions import AdminOrReadOnly, ReviewCommentPermission
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from rest_framework import filters, generics, status, viewsets
 from rest_framework.response import Response
-
-from api.permissions import AdminOrReadOnly, ReviewCommentPermission
+from reviews.filters import TitleFilter
 from reviews.models import Category, Comment, Genre, Review, Title
 from reviews.serializers import (CategorySerializer, CommentSerializer,
                                  GenreSerializer, ReviewSerializer,
                                  TitleSerializer)
-
-from reviews.filters import TitleFilter
 
 
 class CategoryList(generics.ListCreateAPIView):

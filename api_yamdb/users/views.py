@@ -1,3 +1,4 @@
+from api.permissions import AuthorizedOrReadOnly, UserOrAdminOrReadOnly
 from django.core.mail import EmailMessage
 from django.shortcuts import get_object_or_404
 from rest_framework import permissions, status, viewsets
@@ -6,11 +7,10 @@ from rest_framework.filters import SearchFilter
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-
-from api.permissions import AuthorizedOrReadOnly, UserOrAdminOrReadOnly
 from users.models import User
 from users.serializers import (SignUpSerializer, TokenSerializer,
                                UserSerializer, UsersSerializer)
+
 from api_yamdb.settings import DENY_LIST
 
 
