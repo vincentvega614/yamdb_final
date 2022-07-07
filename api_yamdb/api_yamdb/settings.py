@@ -70,11 +70,11 @@ DATABASES = {
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
     'default': {
-        'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
-        'NAME': os.getenv('DB_NAME', default='django.db.backends.postgresql'),
-        'USER': os.getenv('POSTGRES_USER', default='django.db.backends.postgresql'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='django.db.backends.postgresql'),
-        'HOST': os.getenv('DB_HOST', default='django.db.backends.postgresql'),
+        'ENGINE': os.getenv('DB_ENGINE'),
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
     }
 }
 
