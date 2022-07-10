@@ -67,7 +67,7 @@ class Title(models.Model):
         Genre,
         default=None,
         null=True,
-        blank=True
+        blank=True,
         verbose_name='Жанр',
         help_text='Выберите жанр.'
     )
